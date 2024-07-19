@@ -1,7 +1,9 @@
+import { useState } from "react";
 import Button from "./Button";
 import Counts from "./Counts";
 
 function App() {
+  const [number, setNumber] = useState(0);
   return (
     <div
       style={{
@@ -11,8 +13,8 @@ function App() {
         alignItems: "center",
       }}
     >
-      <Counts />
-      <Button />
+      <Counts number={number} />
+      <Button setNumber={setNumber} />
     </div>
   );
 }
